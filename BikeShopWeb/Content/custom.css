@@ -1,0 +1,113 @@
+﻿@import url("http://fonts.googleapis.com/css?family=Lato:100,400,900");
+
+body{
+  background-color: #f0f2f6!important;
+    font-family: 'Lato', sans-serif!important;
+}
+
+
+.navbar-inverse{
+  background-color: #547B65!important;
+  border-color: #080808;
+  background-image:none!important;
+}
+
+.nav.navbar-nav li a {
+     color: #000 !important; 
+ }
+.nav.navbar-nav li a:hover { 
+     color: white !important;
+ }
+.navbar-brand { 
+    color: black !important;  
+    font-weight:900;
+    font-size:20px!important;
+}
+
+.Pages{
+    text-align:center;
+}
+
+
+.Sorting{
+    text-align:right;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-top: 2.5px;
+    padding-right: 15px;
+}
+
+h2{
+    text-align: center;
+}
+
+#product{
+    margin-bottom: 10px;
+}
+
+.pull-right{
+    font-weight:bold;
+    color: green;
+}
+
+
+
+#date{
+    text-align:right;
+}
+
+.name{
+    font-size: 20px;
+    color: green;
+}
+
+.contact{
+    font-size: 16px;
+}
+
+.data{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.Price{
+    font-size: 18px;
+    color: green;
+}
+
+.lead{
+    font-weight:400!important;
+}
+
+.homepagename{
+    font-family: 'Lato', sans-serif!important;
+    font-size: 60px;
+    font-weight:100;
+    border-style:solid;
+    border-color:#547B65;
+    border-width:1.5px;
+    border-radius:15px;
+}
+
+.list-group{
+    padding-top:23px!important;
+}
+
+.img-rounded{
+    max-height: 150px!important;
+    max-width: 150px!important;
+}
+
+.owners{
+    border-right: 1px black solid;
+    text-align: center; 
+    
+}
+
+.ownerM{
+     text-align: center; 
+}
+
+.alert{
+    display: none;
+}

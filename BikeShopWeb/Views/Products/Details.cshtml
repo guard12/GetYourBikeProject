@@ -1,0 +1,72 @@
+﻿@model BikeShopWeb.Models.Product
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <hr />
+            <div class="row">
+                <div class="col-md-4">
+                    <label class="name">@Html.DisplayFor(model => model.productName)</label>
+                    <br />
+                    <label class="contact">Category:</label>
+                    <label class="data">@Html.DisplayFor(model => model.ProductCategory.categoryName)</label>
+                </div>
+                <div id ="date" class="col-md-4 col-md-offset-4">
+                    <label>Created:</label>
+                    <label>@Html.DisplayFor(model => model.ProductAdded)</label>
+                </div>
+                </div>
+                <hr />
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <img src="@Url.Content(Model.ImageUrl)" alt="product picture">
+                </div>
+            </div>
+                <hr />
+                <div class="col-md-12, text-center">
+                    <label class="contact">Description</label>
+                    <br />
+                    <p class="text-center">@Html.DisplayFor(model => model.productDescription)</p>
+                </div>
+                <hr />
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <label class="Price">Price</label>
+                    <br />
+                    <label class="Price">@Html.DisplayFor(model => model.price) DKK</label>
+                    <hr />
+                    </div>
+                    <div class="col-md-12 text-center">
+                    <label class="contact">Contact Information</label>
+                    <br />
+                    <br />
+                    </div>
+                    <div class="col-md-8 col-md-offset-4">
+                    
+                    <br />
+                    <label class="contact">Email:</label>
+                    <label class="data">@Html.DisplayFor(model => model.ApplicationUsers.Email)</label>
+                    <br />
+                    <label class="contact">Phone:</label>
+                    <label class="data">@Html.DisplayFor(model => model.ApplicationUsers.PhoneNumber)</label>
+                    <br />
+                    <label class="contact">Address:</label>
+                    <label class="data">@Html.DisplayFor(model => model.ApplicationUsers.Address)</label>
+                    <br />
+                    <label class="contact">City:</label>
+                    <label class="data">@Html.DisplayFor(model => model.ApplicationUsers.City)</label>
+                    
+                </div>
+                </div>
+            </div>
+    </div>
+    <hr />
+    <p class="contact text-center">
+        @Html.ActionLink("Back", "Index")
+    </p>
+</div>
+

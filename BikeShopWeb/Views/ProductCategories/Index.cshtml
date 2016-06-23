@@ -1,0 +1,39 @@
+﻿@model IEnumerable<BikeShopWeb.Models.ProductCategory>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.categoryName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.categoryNotes)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.categoryName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.categoryNotes)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ProductCategoryID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ProductCategoryID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ProductCategoryID })
+        </td>
+    </tr>
+}
+
+</table>

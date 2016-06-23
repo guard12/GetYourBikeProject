@@ -1,0 +1,22 @@
+﻿@model IEnumerable<BikeShopWeb.Models.Product>
+<head>
+    <!-- Bootstrap Core CSS -->
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="~/Content/shop-homepage.css" rel="stylesheet">
+
+</head>
+<body>
+    @foreach (var item in Model)
+    {
+            <!-- List of Categories -->
+        <div class="list-group-item">
+            @Html.ActionLink(item.productName, "Edit", "Products", new { id = item.ProductID }, null) ||
+            <label>
+                @Html.ActionLink("Delete","Delete", "Products", new { id = item.ProductID }, null)
+            </label>
+        </div>
+
+    }
+
+</body>

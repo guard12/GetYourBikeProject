@@ -1,0 +1,65 @@
+﻿@model BikeShopWeb.Models.IndexViewModel
+@{
+    ViewBag.Title = "User Profile";
+}
+    <head>
+    <link href="~/Content/shop-homepage.css" rel="stylesheet">
+</head>
+
+    <div class="row">
+        <div class="col-md-8 col-lg-offset-2">
+            <p class="homepagename text-center">User Profile</p>
+
+        </div>
+    </div>
+
+
+
+    <div>
+        <h4>Change your account settings</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>Username:</dt>
+            <dd>
+            </dd>
+            <dt>Phone Number:</dt>
+            <dd>
+                @Html.ActionLink("Add Phone Number", "AddPhoneNumber")
+            </dd>
+            <dt>Password:</dt>
+            <dd>
+                [
+                @if (Model.HasPassword)
+            {
+                    @Html.ActionLink("Change your password", "ChangePassword")
+                }
+                else
+                {
+                    @Html.ActionLink("Create", "SetPassword")
+                }
+                ]
+            </dd>
+            <dt>External Logins:</dt>
+            <dd>
+                @Model.Logins.Count [
+                @Html.ActionLink("Manage", "ManageLogins") ]
+            </dd>
+
+
+        </dl>
+    </div>
+    <div>
+        <hr />
+        <h4>Active Listings</h4>
+        <div class="row">
+            <div class="col-xs-12">
+
+                <table class="table table-striped">
+
+                    @Html.Action("UserProducts")
+                </table>
+
+            </div>
+        </div>
+
+    </div>
